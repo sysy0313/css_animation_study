@@ -29,8 +29,12 @@
         #v_btn a {
             width:100px; margin:0 10px; 
             display:flex; align-items:flex-end;
+
         }
-        #v_btn a img {width:100%;}
+        #v_btn a:hover img {
+            transform:rotate(15deg);/* 기준을 중심으로 회전 */
+        }
+        #v_btn a img {width:100%; transition:all 0.3s; transform-origin:right bottom; /* 기준! */}
     </style>
     <script>
         window.onload=function(){

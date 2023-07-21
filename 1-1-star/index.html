@@ -23,8 +23,12 @@
         #v_btn a {
             width:50px; margin:0 10px; 
             display:flex; align-items:flex-end;
+            
         }
-        #v_btn a img {width:100%;}
+        #v_btn a:hover img {
+            transform :translateY(-20px);
+        }
+        #v_btn a img {width:100%; transition:all 0.3s;}
     </style>
     <script>
         window.onload=function(){
