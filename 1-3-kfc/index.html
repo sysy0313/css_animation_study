@@ -16,17 +16,27 @@
             background:#fff; border-radius:50px; text-align:center; padding:20px 0;
             display:inline-block; margin-top:50px; font-weight:600;
             width:200px; color:#000;
+            transition:all 0.3s;
+        }
+        main .txt #order:hover {
+            width:250px; color:#da1e27; box-shadow:0 0 20px rgba(255,255,255,0.5);
         }
         #sns {position:absolute; left:0; bottom:100px;}
         #sns a {
             display:inline-block; width:40px; margin:0 10px;
             position:relative; top:0;
         }
-        #sns a img {width:100%;}
+        #sns a:hover img {
+            transform:translateY(-20px);
+        }
+        #sns a img {width:100%; transition:transform 0.3s;}
         #dynamic #btn {display:flex; position:absolute; right:0; bottom:100px;}
         #dynamic #btn a {margin:0 5px;}
         #dynamic #btn a#prev {}
-        #dynamic #btn a#next {}
+        #dynamic #btn a#next {
+            /* 좌우 봔전이 필요할 때 */
+            transform:scaleX(-1);
+        }
     </style>
     <script>
         window.onload=function(){
