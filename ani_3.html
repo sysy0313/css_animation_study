@@ -14,14 +14,30 @@
         main .target1 {transition:background 1s 0.5s;
         }
         main #btn:hover~.target1 {background:pink;}
-        main .target2 {animation:right500 2s linear 5 alternate-reverse;}
-        main .target3 {}
-        main .target4 {}
-        main .target5 {}
+        main .target2 {animation:right500 2s linear 3 both;}
+        main .target3 {animation:left_top_right 1s linear 7 ;}
+        main .target4 {animation:star 5s linear 4 backwards; }
+        main .target5 {animation:opacity 3s;}
         /* animation + @keyframes */
         @keyframes right500 {   
             0% {transform:translateX(0);}
             100% {transform:translateX(500px);}
+        }
+        @keyframes left_top_right {
+            0% {transform:translate(0, 0);}
+            50% {transform:translate(250px, -100px);}
+            100% {transform:translate(500px, 0);}
+        }
+        @keyframes star {
+            0% {transform:translate(0, 0); background:red;}
+            25% {transform:translate(200px, 0); background:yellow;}
+            50% {transform:translate(0, 200px); background:green;}
+            75% {transform:translate(100px, -200px); background:blue;}
+            100% {transform:translate(200px, 200px); background:purple;}
+        }
+        @keyframes opacity {
+            0% {opacity:0; font-size:1rem;}
+            100% {opacity:1; font-size:3rem;}
         }
         /* @keyframes 작성 위치 style 맨 아래 또는 외부스타일 분리*/
         
@@ -35,7 +51,7 @@
         <button id="btn">적용버튼</button>
         <span class="target1">1</span>
         <span class="target2">2</span>
-        <span class="target3">4</span>
+        <span class="target3">3</span>
         <span class="target4">4</span>
         <span class="target5">5</span>
 
